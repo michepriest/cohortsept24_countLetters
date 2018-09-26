@@ -1,6 +1,16 @@
-function countLetters()
-// can return unique characters that exist in a string
-// report how many instances of each letter were found in the string
+function countLetters(string) {
+  let noSpaces = string.split(" ").join("");
+  let counted = {};
 
-
-console.log(countLetters("Lighthouse in the house"));
+  for(let i = 0; i < noSpaces.length; i++) {
+    let key = noSpaces[i];
+    // if new letter exists add 1 to value
+    if (!counted[key]) {
+      counted[key] = 1
+    } else {
+      counted[key]++
+    }
+  }
+  return counted;
+} 
+console.log(countLetters("lighthouse in the house"));
