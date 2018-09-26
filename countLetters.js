@@ -1,3 +1,4 @@
+
 function countLetters(string) {
   let noSpaces = string.split(" ").join("");
   let counted = {};
